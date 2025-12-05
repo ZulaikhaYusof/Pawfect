@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Favourite Kitty</title>
+
+    <!-- Material Icons CDN -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Poppins Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- === HEADER SECTION === -->
+    <header>
+        <!-- Settings button -->
+        <button id="settings">
+            <i class="material-icons">settings</i>
+        </button>
+
+        <!-- App title -->
+        <h1>Pawfect</h1>
+
+        <!-- Profile button -->
+        <button id="profile">
+            <i class="material-icons">account_circle</i>
+        </button>
+    </header>
+
+    <!-- === MAIN CONTENT === -->
+    <main>
+        <!-- Cat images container -->
+        <div id="cat-container">
+            <!-- Next cat preview (behind the main cat image) -->
+            <img id="next-cat" src="" alt="Next cat">
+
+            <!-- Main cat image -->
+            <img id="cat-image" src="" alt="Cute cat">
+        </div>
+
+        <!-- Action buttons -->
+        <div id="buttons">
+            <!-- Back button -->
+            <button id="back">
+                <i class="material-icons">replay</i>
+            </button>
+
+            <!-- Dislike button -->
+            <button id="dislike">
+                <i class="material-icons">clear</i>
+            </button>
+
+            <!-- Like button -->
+            <button id="like">
+                <i class="material-icons">favorite</i>
+            </button>
+        </div>
+    </main>
+
+    <!-- === SUMMARY SECTION === -->
+    <section id="summary">
+        <h2>Your Pawfect Picks: <span id="like-count">0</span></h2>
+        <!-- Grid to display liked cats -->
+        <div id="liked-cats-grid"></div>
+    </section>
+
+    <!-- === ALBUM IMAGE VIEWER POPUP === -->
+    <div id="album-viewer">
+        <span id="close-album-viewer">&times;</span>
+        <img id="viewer-album-img" src="" alt="Big cat">
+    </div>
+
+    <!-- === LIKED CATS ALBUM POPUP === -->
+    <div id="liked-album" class="popup">
+        <div class="popup-content">
+            <button id="close-liked-album" class="close-btn">×</button>
+            <h2>Your Liked Cats</h2>
+            <div id="liked-album-grid"></div>
+        </div>
+    </div>
+
+    <!-- === NO MORE CATS POPUP === -->
+    <div id="no-more-cats-popup" class="popup">
+        <div class="popup-content">
+            <!-- Close button top-right -->
+            <button id="close-popup">×</button>
+
+            <!-- Message -->
+            <h2>😿 You've met every kitty!</h2>
+            <p>Boop to see new friends.</p>
+
+            <!-- Big circular refresh button -->
+            <button id="refresh-cats" class="circle-btn">
+                <i class="material-icons">refresh</i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
